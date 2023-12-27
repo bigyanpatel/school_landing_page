@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="flex items-center py-2 px-28 bg-[#F7F9EE] w-full justify-between">
+    <div className="flex flex-col md:flex-row md:items-center py-2 px-4 lg:px-28 bg-[#F7F9EE] w-full justify-between gap-3">
       <div className="flex items-center gap-6">
         <Image
           src={school}
@@ -16,14 +16,14 @@ const Header = () => {
         />
         <h3 className="font-bold">ABC Matric High School</h3>
       </div>
-      <div className="flex items-center gap-4">
-        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800">About Us</Link>
-        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800">Contact Us</Link>
-        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800">Gallery</Link>
-        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800">Notice Board</Link>
-        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800">Socials</Link>
-        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800">Course Content</Link>
-        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800">Faculty Photos</Link>
+      <div className="flex items-center gap-4 overflow-x-auto overflow-y-hidden">
+        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800 h-6">About Us</Link>
+        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800 h-6">Contact Us</Link>
+        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800 h-6">Gallery</Link>
+        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800 h-6">Notice Board</Link>
+        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800 h-6">Socials</Link>
+        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800 h-6">Course Content</Link>
+        <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800 h-6">Faculty Photos</Link>
       </div>
     </div>
   );
