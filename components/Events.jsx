@@ -6,10 +6,10 @@ import syllabus from "@/assests/images/syllabus.jpg";
 
 const Events = () => {
   return (
-    <div className="w-full p-[80px]">
+    <div className="w-full p-4 sm:p-10 lg:p-[80px]">
       <div className="w-full flex justify-between items-center">
         <h1 className="font-bold text-3xl">School News and Updates</h1>
-        <Link href="#" className="text-green-500 flex items-center gap-4">
+        <Link href="#" className="text-green-500 flex items-center gap-4 min-w-[120px] text-sm sm:text-base">
           View All News
           <FaArrowRight />
         </Link>
