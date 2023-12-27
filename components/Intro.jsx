@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const Intro = () => {
   return (
-    <div className="flex w-full h-[500px] bg-[#01937C]">
-      <div className="w-1/2 px-20 py-14 flex flex-col gap-6">
-        <h1 className="text-6xl text-white font-bold">
+    <div className="flex flex-col md:flex-row w-full bg-[#01937C] md:h-[500px]">
+      <div className="w-full md:w-1/2 px-4 md:px-20 py-14 flex flex-col gap-6 justify-evenly">
+        <h1 className="text-2xl md:text-3xl lg:text-5xl text-white font-bold">
           ABC school debuts for arts, discovery and connections.
         </h1>
         <h6 className="text-white">
@@ -15,8 +15,8 @@ const Intro = () => {
         </h6>
         <Link href="#" className="bg-[#FFC074] font-semibold px-4 py-2 w-fit">Learn More</Link>
       </div>
-      <div className="relative w-1/2">
-        <Image src={students} alt="students" fill className="w-full h-full absolute object-cover object-center"/>
+      <div className="relative w-full md:w-1/2 h-[300px] md:h-full">
+        <Image src={students} alt="students" fill className="w-full h-full object-cover object-center"/>
       </div>
     </div>
   );
