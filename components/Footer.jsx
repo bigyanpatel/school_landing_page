@@ -13,8 +13,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section className="bg-[#F7F9EE] px-[80px] pt-10 pb-5">
-      <div className="w-full flex justify-between">
+    <section className="bg-[#F7F9EE] px-4 lg:px-[80px] pt-10 pb-5">
+      <div className="w-full flex flex-wrap justify-center sm:justify-between gap-8">
         <div className="flex gap-4">
           <div className="w-[100px] h-[100px] relative">
             <Image
@@ -116,7 +116,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full h-[2px] bg-gray-500 rounded-full my-4"></div>
-      <div className="flex justify-between">
+      <div className="flex flex-col sm:flex-row justify-between gap-4">
         <p>Copyright @ 2024 ABC School, All Rights Reserved.</p>
         <div className="flex gap-4">
           <Link href="#">Terms of Service</Link>
