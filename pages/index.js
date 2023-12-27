@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Courses from "@/components/Courses";
+import Events from "@/components/Events";
 import Header from "@/components/Header";
 import Intro from "@/components/Intro";
 import TopHeader from "@/components/TopHeader";
@@ -11,5 +12,6 @@ export default function Home() {
     <Intro />
     <About />
     <Courses />
+    <Events />
   </main>;
 }
