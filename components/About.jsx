@@ -1,15 +1,24 @@
 import React from "react";
 import schoolLane from "@/assests/images/school_lane.jpg";
 import Image from "next/image";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const About = () => {
   return (
     <div
       id="about"
-      className="flex flex-col sm:flex-row w-full h-[1000px] sm:h-[700px] p-10 md:p-14 lg:p-[100px] gap-6"
+      className="flex flex-col sm:flex-row w-full p-10 md:p-14 lg:p-[100px] gap-10 sm:gap-6"
     >
-      <div className="w-full sm:w-1/2 h-full lg:pr-[100px] order-2 sm:order-1">
-        <div className="w-full h-full relative">
+      <Carousel
+        swipeable={true}
+        showIndicators={true}
+        showArrows={true}
+        className="w-full sm:w-1/2 h-fit lg:pr-[100px] order-2 sm:order-1 relative"
+        infiniteLoop
+        autoPlay
+      >
+        <div className="w-full h-[300px] sm:h-[500px] relative">
           <Image
             src={schoolLane}
             alt="Long school corridor"
@@ -17,7 +26,23 @@ const About = () => {
             className="w-full h-full absolute object-cover object-center"
           />
         </div>
-      </div>
+        <div className="w-full h-[300px] sm:h-[500px] relative">
+          <Image
+            src={schoolLane}
+            alt="Long school corridor"
+            fill
+            className="w-full h-full absolute object-cover object-center"
+          />
+        </div>
+        <div className="w-full h-[300px] sm:h-[500px] relative">
+          <Image
+            src={schoolLane}
+            alt="Long school corridor"
+            fill
+            className="w-full h-full absolute object-cover object-center"
+          />
+        </div>
+      </Carousel>
       <div className="relative w-full sm:w-1/2 flex flex-col justify-between gap-4 order-1 sm:order-2">
         <h1 className="font-semibold text-3xl">About our School</h1>
         <article>
