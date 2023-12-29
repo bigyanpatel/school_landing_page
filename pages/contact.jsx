@@ -17,9 +17,6 @@ const ContactPage = () => {
           fill
           className="w-full h-full object-contain sm:object-cover object-center absolute"
         />
-        {/* <h1 className="text-6xl font-bold text-gray-100 absolute top-[100px] left-1/2 -translate-x-1/2 z-[10]">
-          Contact Us
-        </h1> */}
       </div>
       <div className="bg-gray-200 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
