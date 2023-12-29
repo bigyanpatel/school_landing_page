@@ -4,7 +4,10 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="flex flex-col sm:flex-row w-full h-[1000px] sm:h-[700px] p-10 md:p-14 lg:p-[100px] gap-6">
+    <div
+      id="about"
+      className="flex flex-col sm:flex-row w-full h-[1000px] sm:h-[700px] p-10 md:p-14 lg:p-[100px] gap-6"
+    >
       <div className="w-full sm:w-1/2 h-full lg:pr-[100px] order-2 sm:order-1">
         <div className="w-full h-full relative">
           <Image
