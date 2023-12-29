@@ -17,7 +17,10 @@ const Intro = () => {
           challenged, engaged, and supported in a learning enviroment that
           places no limits on what they can achieve.
         </h6>
-        <Link href="#about" className="bg-[#FFC074] font-semibold px-4 py-2 w-fit">
+        <Link
+          href="#about"
+          className="bg-[#FFC074] font-semibold px-4 py-2 w-fit"
+        >
           Learn More
         </Link>
       </div>
@@ -25,6 +28,7 @@ const Intro = () => {
         swipeable={true}
         showIndicators={true}
         showArrows={true}
+        showThumbs={false}
         className="w-full md:w-1/2 h-[300px] md:h-[500px]"
         infiniteLoop
         autoPlay
