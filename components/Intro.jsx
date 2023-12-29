@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import students from "@/assests/images/students.jpg"
-import Link from "next/link";
+import students from "@/assests/images/students.jpg";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Intro = () => {
   return (
@@ -11,13 +12,47 @@ const Intro = () => {
           ABC school debuts for arts, discovery and connections.
         </h1>
         <h6 className="text-white">
-          ABC school is rooted in the belief that every student should be challenged, engaged, and supported in a learning enviroment that places no limits on what they can achieve.
+          ABC school is rooted in the belief that every student should be
+          challenged, engaged, and supported in a learning enviroment that
+          places no limits on what they can achieve.
         </h6>
-        <Link href="#" className="bg-[#FFC074] font-semibold px-4 py-2 w-fit">Learn More</Link>
+        {/* <Link href="#" className="bg-[#FFC074] font-semibold px-4 py-2 w-fit">
+          Learn More
+        </Link> */}
       </div>
-      <div className="relative w-full md:w-1/2 h-[300px] md:h-full">
-        <Image src={students} alt="students" fill className="w-full h-full object-cover object-center"/>
-      </div>
+      <Carousel
+        swipeable={true}
+        showIndicators={true}
+        showArrows={true}
+        className="w-full md:w-1/2 h-[300px] md:h-[500px]"
+        infiniteLoop
+        autoPlay
+      >
+        <div className="relative w-full h-[300px] md:h-[500px]">
+          <Image
+            src={students}
+            alt="students"
+            fill
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
+        <div className="relative w-full h-[300px] md:h-[500px]">
+          <Image
+            src={students}
+            alt="students"
+            fill
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
+        <div className="relative w-full h-[300px] md:h-[500px]">
+          <Image
+            src={students}
+            alt="students"
+            fill
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
+      </Carousel>
     </div>
   );
 };
