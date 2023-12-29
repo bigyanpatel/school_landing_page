@@ -14,7 +14,7 @@ const Header = () => {
           height={50}
           quality={95}
         />
-        <h3 className="font-bold">ABC Matric High School</h3>
+        <Link href="/" className="font-bold">ABC Matric High School</Link>
       </div>
       <div className="flex items-center gap-4 overflow-x-auto overflow-y-hidden">
         <Link href="#" className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800 h-6">About Us</Link>
