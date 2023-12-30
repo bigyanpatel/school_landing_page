@@ -30,6 +30,7 @@ const Intro = () => {
         showArrows={true}
         showThumbs={false}
         className="w-full md:w-1/2 h-[300px] md:h-[500px]"
+        swipeScrollTolerance={50}
         infiniteLoop
         autoPlay
       >

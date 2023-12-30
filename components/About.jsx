@@ -16,6 +16,7 @@ const About = () => {
         showArrows={true}
         showThumbs={false}
         className="w-full sm:w-1/2 h-fit lg:pr-[100px] order-2 sm:order-1 relative"
+        swipeScrollTolerance={50}
         infiniteLoop
         autoPlay
       >
