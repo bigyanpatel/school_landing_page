@@ -44,12 +44,6 @@ const Header = () => {
           Notice Board
         </Link>
         <Link
-          href="#"
-          className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800 h-6"
-        >
-          Socials
-        </Link>
-        <Link
           href="/courses"
           className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800 h-6"
         >
