@@ -5,7 +5,7 @@ import { IoIosMail } from "react-icons/io";
 
 const TopHeader = () => {
   return (
-    <div className="w-full bg-[#FAF1E6] flex flex-col sm:flex-row items-center justify-between px-4 py-2 sm:px-24 gap-4">
+    <div className="w-full bg-[#FAF1E6] flex flex-col sm:flex-row items-center justify-between px-4 py-2 sm:px-24">
       <div className="flex items-center gap-4">
         <div className="flex gap-2 items-center text-sm">
           <FaPhoneAlt className="text-[#27957E]" />
@@ -16,11 +16,11 @@ const TopHeader = () => {
           <p>schooling@gmail.com</p>
         </div>
       </div>
-      <div className="flex items-center gap-4 text-sm">
+      {/* <div className="flex items-center gap-4 text-sm">
         <Link href="#">Alumini</Link>
         <Link href="#">Calender</Link>
         <Link href="#">Email Login</Link>
-      </div>
+      </div> */}
     </div>
   );
 };
