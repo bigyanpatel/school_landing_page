@@ -13,7 +13,7 @@ const CoursesPage = ({ scienceCourses, commerceCourses, artsCourses }) => {
     return (
       <div className="bg-teal-50 rounded-lg p-4 min-w-[300px]">
         <h2 className="px-4 py-2 text-xl font-bold">
-          {courses[0].fields.category}
+          {courses[0]?.fields.category}
         </h2>
         <div className="h-[2px] w-full bg-gray-800 rounded-full"></div>
         <div className="w-full flex flex-col gap-2">
@@ -49,9 +49,9 @@ const CoursesPage = ({ scienceCourses, commerceCourses, artsCourses }) => {
         </h1>
       </div>
       <div className="w-full flex gap-6 p-10 justify-center flex-wrap">
-        {renderCourses(scienceCourses)}
-        {renderCourses(commerceCourses)}
-        {renderCourses(artsCourses)}
+        {scienceCourses?.length > 0 && renderCourses(scienceCourses)}
+        {commerceCourses?.length > 0 && renderCourses(commerceCourses)}
+        {artsCourses?.length > 0 && renderCourses(artsCourses)}
       </div>
       <Footer />
     </>
