@@ -1,11 +1,35 @@
 import Image from "next/image";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Dialog from "./Modal";
+import { useContentfulClient } from "@/hooks/contentful";
 
-const NoticeBoard = ({ notices }) => {
+const NoticeBoard = () => {
   const [open, setOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const containerRef = useRef(null);
+  const [notices, setNotices] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 10;
+  const client = useContentfulClient();
+
+  useEffect(() => {
+    const fetchNotices = async () => {
+      const skip = (currentPage - 1) * pageSize;
+      try {
+        const response = await client.getEntries({
+          content_type: "notice",
+          skip,
+          limit: pageSize,
+        });
+        console.log(response);
+        setNotices(response.items);
+      } catch (error) {
+        console.error("Error fetching notices:", error);
+      }
+    };
+
+    fetchNotices();
+  }, []);
 
   const scroll = (scrollOffset) => {
     containerRef.current.scrollBy({
@@ -47,7 +71,7 @@ const NoticeBoard = ({ notices }) => {
               id: eventContent.sys.id,
               title: eventContent.fields.title,
               description: eventContent.fields.description,
-              image: 'https:' + eventContent.fields.coverPhoto.fields.file.url,
+              image: "https:" + eventContent.fields.coverPhoto.fields.file.url,
             };
 
             return (
