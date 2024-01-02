@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="flex flex-col md:flex-row md:items-center py-2 px-4 lg:px-28 bg-[#F7F9EE] w-full justify-between gap-3 sticky top-0 z-10">
+    <header className="flex flex-col md:flex-row md:items-center py-2 px-4 lg:px-28 bg-[#F7F9EE] w-full justify-between gap-3 sticky top-0 z-10">
       <div className="flex items-center gap-6">
         <Image
           src={school}
@@ -15,7 +15,7 @@ const Header = () => {
           quality={95}
         />
         <Link href="/" className="font-bold">
-          ABC Matric High School
+          Biju Patnaik Degree College
         </Link>
       </div>
       <div className="flex items-center gap-4 overflow-x-auto overflow-y-hidden">
@@ -56,7 +56,7 @@ const Header = () => {
           Faculty Photos
         </Link>
       </div>
-    </div>
+    </header>
   );
 };
 

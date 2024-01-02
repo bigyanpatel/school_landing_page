@@ -10,12 +10,13 @@ const Intro = () => {
     <div className="flex flex-col md:flex-row w-full bg-[#01937C] md:h-[500px]">
       <div className="w-full md:w-1/2 px-4 md:px-20 py-14 flex flex-col gap-6 items-start">
         <h1 className="text-2xl md:text-3xl lg:text-5xl text-white font-bold">
-          ABC school debuts for arts, discovery and connections.
+          Welcome to Biju Patnaik Degree College
         </h1>
         <h6 className="text-white">
-          ABC school is rooted in the belief that every student should be
-          challenged, engaged, and supported in a learning enviroment that
-          places no limits on what they can achieve.
+          Our mission is to empower students with knowledge, skills, and values
+          that prepare them for lifelong success and societal impact. We
+          envision becoming a premier institution recognized for academic
+          innovation, research excellence, and community engagement.
         </h6>
         <Link
           href="#about"

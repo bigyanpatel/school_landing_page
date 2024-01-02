@@ -1,9 +1,8 @@
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import Dialog from "./Modal";
-import { events } from "@/constants";
 
-const NoticeBoard = () => {
+const NoticeBoard = ({ notices }) => {
   const [open, setOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const containerRef = useRef(null);
@@ -43,33 +42,42 @@ const NoticeBoard = () => {
           ref={containerRef}
           className="flex gap-8 flex-nowrap overflow-x-auto md:overflow-x-hidden"
         >
-          {events.map((eventContent) => (
-            <div
-              key={eventContent.id}
-              className="min-w-[300px] max-w-[300px] flex flex-col justify-between gap-4"
-            >
-              <div className="flex flex-col gap-4">
-                <div className="w-full h-[250px] relative overflow-hidden rounded-lg">
-                  <Image
-                    src={eventContent.image}
-                    alt="test photo"
-                    fill
-                    className="absolute w-full h-full object-cover object-center"
-                  />
-                </div>
-                <h3 className="font-semibold text-xl">{eventContent.title}</h3>
-                <h6 className="text-sm line-clamp-3">
-                  {eventContent.description}
-                </h6>
-              </div>
-              <button
-                onClick={() => handleEventDetails(eventContent)}
-                className="px-4 py-2 bg-green-700 text-white w-fit"
+          {notices.map((eventContent) => {
+            const eventData = {
+              id: eventContent.sys.id,
+              title: eventContent.fields.title,
+              description: eventContent.fields.description,
+              image: 'https:' + eventContent.fields.coverPhoto.fields.file.url,
+            };
+
+            return (
+              <div
+                key={eventData.id}
+                className="min-w-[300px] max-w-[300px] flex flex-col justify-between gap-4"
               >
-                Read More
-              </button>
-            </div>
-          ))}
+                <div className="flex flex-col gap-4">
+                  <div className="w-full h-[250px] relative overflow-hidden rounded-lg">
+                    <Image
+                      src={eventData.image}
+                      alt="test photo"
+                      fill
+                      className="absolute w-full h-full object-cover object-center"
+                    />
+                  </div>
+                  <h3 className="font-semibold text-xl">{eventData.title}</h3>
+                  <h6 className="text-sm line-clamp-3">
+                    {eventData.description}
+                  </h6>
+                </div>
+                <button
+                  onClick={() => handleEventDetails(eventData)}
+                  className="px-4 py-2 bg-green-700 text-white w-fit"
+                >
+                  Read More
+                </button>
+              </div>
+            );
+          })}
         </div>
         <button
           className="absolute top-1/2 transform -translate-y-1/2 left-2 bg-gray-200 px-3 py-1 text-3xl rounded-full hidden md:block"

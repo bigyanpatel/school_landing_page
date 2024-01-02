@@ -101,7 +101,9 @@ const Footer = () => {
       </div>
       <div className="w-full h-[2px] bg-gray-500 rounded-full my-4"></div>
       <div className="flex flex-col sm:flex-row justify-between gap-4">
-        <p>Copyright @ 2024 ABC School, All Rights Reserved.</p>
+        <p>
+          Copyright @ 2024 Biju Patnaik Degree College, All Rights Reserved.
+        </p>
       </div>
     </section>
   );

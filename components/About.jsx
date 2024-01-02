@@ -48,17 +48,18 @@ const About = () => {
       <div className="relative w-full sm:w-1/2 flex flex-col justify-between gap-4 order-1 sm:order-2">
         <h1 className="font-semibold text-3xl">About our School</h1>
         <article>
-          At [School Name], we foster an environment that nurtures intellectual
-          curiosity, creativity, and personal growth. Our institution stands as
-          a beacon of academic excellence, dedicated to shaping well-rounded
-          individuals equipped to thrive in an ever-evolving world.
+          Established in [Year], Biju Patnaik Degree College has been dedicated
+          to providing accessible, affordable, and high-quality higher
+          education. Named in honor of the visionary leader Shri Biju Patnaik,
+          our institution upholds his values of integrity, leadership, and
+          social responsibility.
         </article>
-        <article>
+        {/* <article>
           Our vision is to empower students to become lifelong learners and
           responsible global citizens. We aim to cultivate critical thinking,
           encourage innovation, and instill values that embrace diversity,
           integrity, and community engagement.
-        </article>
+        </article> */}
         <div className="flex gap-28">
           <div className="flex flex-col gap-2">
             <p className="font-semibold text-2xl">2100+</p>
