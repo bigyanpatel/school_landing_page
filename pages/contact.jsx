@@ -4,8 +4,9 @@ import TopHeader from "@/components/TopHeader";
 import Image from "next/image";
 import React from "react";
 import contact from "@/assests/images/contact.jpg";
+import { createClient } from "contentful";
 
-const ContactPage = () => {
+const ContactPage = ({ contactDetails }) => {
   return (
     <>
       <TopHeader />
@@ -22,70 +23,24 @@ const ContactPage = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {/* General Inquiries */}
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-lg font-semibold mb-3">General Inquiries</h3>
-              <p>
-                For general questions, information, or assistance, please
-                contact our main office:
-              </p>
-              <p className="mt-4">
-                <span className="font-semibold">Phone:</span> (123) 456-7890
-                <br />
-                <span className="font-semibold">Email:</span>{" "}
-                info@collegename.edu
-              </p>
-            </div>
-
-            {/* Admissions */}
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-lg font-semibold mb-3">Admissions</h3>
-              <p>
-                If you have questions related to admissions, applications, or
-                enrollment, please contact our admissions office:
-              </p>
-              <p className="mt-4">
-                <span className="font-semibold">Phone:</span> (123) 456-7891
-                <br />
-                <span className="font-semibold">Email:</span>{" "}
-                admissions@collegename.edu
-              </p>
-            </div>
-
-            {/* Academic Departments */}
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-lg font-semibold mb-3">
-                Academic Departments
-              </h3>
-              <p>
-                For inquiries related to specific academic departments or
-                programs, please refer to the respective department contact
-                details available on our website or use the following general
-                academic contact:
-              </p>
-              <p className="mt-4">
-                <span className="font-semibold">Phone:</span> (123) 456-7892
-                <br />
-                <span className="font-semibold">Email:</span>{" "}
-                academics@collegename.edu
-              </p>
-            </div>
-
-            {/* Alumni Relations */}
-            <div className="bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-lg font-semibold mb-3">Alumni Relations</h3>
-              <p>
-                Our alumni play a crucial role in shaping the college community.
-                For alumni-related inquiries, events, or updates, please reach
-                out to:
-              </p>
-              <p className="mt-4">
-                <span className="font-semibold">Phone:</span> (123) 456-7893
-                <br />
-                <span className="font-semibold">Email:</span>{" "}
-                alumni@collegename.edu
-              </p>
-            </div>
+            {contactDetails.map((contact) => (
+              <div
+                key={contact.sys.id}
+                className="bg-white rounded-lg p-6 shadow-md"
+              >
+                <h3 className="text-lg font-semibold mb-3">
+                  {contact.fields.title}
+                </h3>
+                <p>{contact.fields.description}:</p>
+                <p className="mt-4">
+                  <span className="font-semibold">Phone:</span>{" "}
+                  {contact.fields.phone}
+                  <br />
+                  <span className="font-semibold">Email:</span>{" "}
+                  {contact.fields.email}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -94,5 +49,32 @@ const ContactPage = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY,
+  });
+
+  try {
+    const response = await client.getEntries({
+      content_type: "contact",
+    });
+
+    return {
+      props: {
+        contactDetails: response.items,
+      },
+      revalidate: 60, // Adjust revalidation period as needed
+    };
+  } catch (error) {
+    console.error("Error fetching contact data:", error);
+    return {
+      props: {
+        contactDetails: [],
+      },
+    };
+  }
+}
 
 export default ContactPage;
