@@ -9,11 +9,11 @@ const TopHeader = () => {
       <div className="flex items-center gap-4">
         <div className="flex gap-2 items-center text-sm">
           <FaPhoneAlt className="text-[#27957E]" />
-          <p>[+91] 7847587934</p>
+          <p>[+91] 8328921955</p>
         </div>
         <div className="flex gap-2 items-center text-sm">
           <IoIosMail className="text-[#27957E]" />
-          <p>schooling@gmail.com</p>
+          <p>principal_bpdc@yahoo.com</p>
         </div>
       </div>
       {/* <div className="flex items-center gap-4 text-sm">

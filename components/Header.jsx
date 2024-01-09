@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import school from "@/assests/images/school_logo.png";
 import Link from "next/link";
 
 const Header = () => {
@@ -8,14 +7,14 @@ const Header = () => {
     <header className="flex flex-col md:flex-row md:items-center py-2 px-4 lg:px-28 bg-[#F7F9EE] w-full justify-between gap-3 sticky top-0 z-10">
       <div className="flex items-center gap-6">
         <Image
-          src={school}
+          src={"/bpgc_logo.png"}
           alt="school_logo"
           width={50}
           height={50}
           quality={95}
         />
         <Link href="/" className="font-bold">
-          Biju Patnaik Degree College
+          BIJU PATTNAIK DEGREE COLLEGE
         </Link>
       </div>
       <div className="flex items-center gap-4 overflow-x-auto overflow-y-hidden">
