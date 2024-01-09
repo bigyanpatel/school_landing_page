@@ -52,7 +52,7 @@ const NoticeBoard = () => {
   return (
     <div id="notice" className="w-full p-4 sm:p-10 lg:p-[80px]">
       <div className="w-full flex justify-between items-center">
-        <h1 className="font-bold text-3xl">School News and Updates</h1>
+        <h1 className="font-bold text-3xl">College News and Updates</h1>
         {/* <Link
           onClick={() => setOpen(true)}
           className="text-green-500 flex items-center gap-4 min-w-[120px] text-sm sm:text-base"
