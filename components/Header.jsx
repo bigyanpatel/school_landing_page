@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="flex flex-col md:flex-row md:items-center py-2 px-4 lg:px-28 bg-[#F7F9EE] w-full justify-between gap-3 sticky top-0 z-10">
+    <header className="flex flex-col md:flex-row md:items-center py-2 px-4 lg:px-28 bg-[#F7F9EE] w-full justify-between gap-3 sticky top-0 z-50">
       <div className="flex items-center gap-6">
         <Image
           src={"/bpgc_logo.png"}

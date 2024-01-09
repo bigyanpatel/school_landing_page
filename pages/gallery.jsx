@@ -3,7 +3,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import TopHeader from "@/components/TopHeader";
-import eventSample3 from "@/assests/images/eventSample3.jpg";
+import college_gallery from "@/assests/images/college_gallery.jpeg";
 import { createClient } from "contentful";
 
 export async function getStaticProps() {
@@ -40,7 +40,7 @@ const GalleryPage = ({ galleryItems }) => {
       <Header />
       <div className="w-full h-[300px] sm:h-[500px] relative overflow-hidden">
         <Image
-          src={eventSample3}
+          src={college_gallery}
           alt="Gallery"
           fill
           className="w-full h-full object-cover object-center absolute"
@@ -60,9 +60,9 @@ const GalleryPage = ({ galleryItems }) => {
                 src={"https:" + item.fields.photo.fields.file.url}
                 alt={`Gallery Image ${index + 1}`}
                 fill
-                className="object-cover object-center absolute"
+                className="object-contain object-center absolute"
               />
-              <h2 className="group-hover:opacity-100 opacity-0 text-white text-xl font-semibold absolute duration-500 bottom-4 left-4">
+              <h2 className="group-hover:opacity-100 opacity-0 text-gray-800 hover:border hover:border-gray-500 text-xl font-semibold absolute duration-500 bottom-4 left-4">
                 {item.fields.title}
               </h2>
             </div>
