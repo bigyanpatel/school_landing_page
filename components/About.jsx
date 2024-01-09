@@ -47,11 +47,11 @@ const About = () => {
         </div>
       </Carousel>
       <div className="relative w-full sm:w-1/2 flex flex-col justify-between gap-4 order-1 sm:order-2">
-        <h1 className="font-semibold text-3xl">About our School</h1>
+        <h1 className="font-semibold text-3xl">About our College</h1>
         <article>
-          Established in [Year], Biju Patnaik Degree College has been dedicated
+          Established in 1991 - 1992, Biju Pattnaik Degree College has been dedicated
           to providing accessible, affordable, and high-quality higher
-          education. Named in honor of the visionary leader Shri Biju Patnaik,
+          education. Named in honor of the visionary leader Shri Biju Pattnaik,
           our institution upholds his values of integrity, leadership, and
           social responsibility.
         </article>
@@ -63,7 +63,7 @@ const About = () => {
         </article> */}
         <div className="flex gap-28">
           <div className="flex flex-col gap-2">
-            <p className="font-semibold text-2xl">2100+</p>
+            <p className="font-semibold text-2xl">1344+</p>
             <span className="w-full rounded-full bg-green-500 h-1"></span>
             <p>Students</p>
           </div>
@@ -75,7 +75,7 @@ const About = () => {
         </div>
         <div className="flex gap-28">
           <div className="flex flex-col gap-2">
-            <p className="font-semibold text-2xl">235+</p>
+            <p className="font-semibold text-2xl">46+</p>
             <span className="w-full rounded-full bg-green-500 h-1"></span>
             <p>Staffs</p>
           </div>
