@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex gap-4">
           <div className="w-[100px] h-[100px] relative">
             <Image
-              src={'/bpgc_logo.png'}
+              src={"/bpgc_logo.png"}
               alt="school logo"
               fill
               className="w-full h-full object-contain object-center"
@@ -72,7 +72,8 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-4">
             <Link
-              href="#"
+              href="https://www.facebook.com/groups/1748152875497337/?ref=share&mibextid=NSMWBT"
+              target="_blank"
               className="hover:border-blue-500 duration-500 hover:border-b hover:text-blue-800 h-[28px] flex gap-2 items-center"
             >
               <FaFacebookF /> Facebook
