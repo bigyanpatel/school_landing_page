@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import schoolLogo from "@/assests/images/school_logo.png";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -16,7 +15,7 @@ const Footer = () => {
         <div className="flex gap-4">
           <div className="w-[100px] h-[100px] relative">
             <Image
-              src={schoolLogo}
+              src={'/bpgc_logo.png'}
               alt="school logo"
               fill
               className="w-full h-full object-contain object-center"
@@ -24,9 +23,9 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-4">
             <p>
-              123, Green Street,
-              <br /> Saraswati Nagar, Mumbai,
-              <br /> Maharashtra - 400001,
+              Ashrampatna,
+              <br /> Jagatsinghpur,
+              <br /> Odisha - 754109,
               <br />
               India
             </p>
@@ -102,7 +101,7 @@ const Footer = () => {
       <div className="w-full h-[2px] bg-gray-500 rounded-full my-4"></div>
       <div className="flex flex-col sm:flex-row justify-between gap-4">
         <p>
-          Copyright @ 2024 Biju Patnaik Degree College, All Rights Reserved.
+          Copyright @ 2024 Biju Pattnaik Degree College, All Rights Reserved.
         </p>
       </div>
     </section>
