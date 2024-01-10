@@ -11,7 +11,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <section className="bg-[#F7F9EE] px-4 lg:px-[80px] pt-10 pb-5">
-      <div className="w-full flex flex-wrap justify-center sm:justify-between gap-8">
+      <div className="w-full flex flex-wrap justify-left sm:justify-between gap-8">
         <div className="flex gap-4">
           <div className="w-[100px] h-[100px] relative">
             <Image

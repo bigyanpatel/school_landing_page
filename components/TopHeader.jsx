@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
