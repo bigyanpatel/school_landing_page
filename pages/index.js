@@ -5,9 +5,13 @@ import Header from "@/components/Header";
 import Intro from "@/components/Intro";
 import NoticeBoard from "@/components/Notice";
 import TopHeader from "@/components/TopHeader";
+import Head from "next/head";
 
 export default function Home() {
   return <main>
+    <Head>
+      <title>Biju Pattnaik Degree College</title>
+    </Head>
     <TopHeader />
     <Header />
     <Intro />
