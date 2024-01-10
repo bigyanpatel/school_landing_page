@@ -11,6 +11,11 @@ export default function Home() {
   return <main>
     <Head>
       <title>Biju Pattnaik Degree College</title>
+      <meta
+        name="description"
+        content="Established in 1991 - 1992, Biju Pattnaik Degree College has been dedicated to providing accessible, affordable, and high-quality higher education. Named in honor of the visionary leader Shri Biju Pattnaik, our institution upholds his values of integrity, leadership, and social responsibility."
+        key="desc"
+      />
     </Head>
     <TopHeader />
     <Header />
